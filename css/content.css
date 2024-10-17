@@ -127,7 +127,7 @@
 		z-index:0;
 		opacity:0;
 		overflow:visible;
-		 image-rendering: pixelated;
+		 /*image-rendering: pixelated;*/
 	}
 	
 	.load-project-page #hero-bg-image, .load-next-project #hero-bg-image, .load-project-thumb-with-title #hero-bg-image {
@@ -137,8 +137,8 @@
 	}
 	
 	.hero-title {
-		font-size: calc(1rem + 14.15vw);
-		line-height: calc(1rem + 22vw);
+		font-size: calc(1rem + 9.15vw);
+		line-height: calc(1rem + 8vw);
 		font-weight: 500;
 		position: relative;
 		display:block;
@@ -157,7 +157,7 @@
 	.height-title .hero-title {
 		position:relative;
 		overflow:visible;
-		white-space: wrap;
+		white-space: nowrap;
 	}
 	
 	.height-title .hero-title div {
@@ -168,7 +168,7 @@
 		opacity:0;
 		display: block;
 		margin-top:0;
-		min-width:3vw;
+		min-width:2vw;
 		transform: translateY(160px);
 		-webkit-transform: translateY(160px);
 	}
