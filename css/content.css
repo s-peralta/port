@@ -170,7 +170,7 @@
 		margin-top:0;
 		min-width:2vw;
 		transform: translateY(160px);
-		-webkit-transform: translateY(160px);
+		-webkit-transform: translateY(160px); 
 	}
 	
 	.height-title .hero-title span {
@@ -199,7 +199,7 @@
 		overflow:hidden;
 		margin-left: 0px;
 		color:#000;
-		opacity:0.4;
+		opacity:0.5;
 	}
 	
 	.subtitle-padding-left .hero-subtitle {
