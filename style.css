@@ -603,32 +603,32 @@ Primary use:	Showcase Portfolio
 	}
 	
 	
-	h1{
+	h1, .h1{
 		font-size: calc(1rem + 4.15vw);
 		line-height: calc(1rem + 4.5vw);
 	}
 	
-	h2{
+	h2, .h2{
 		font-size: calc(1rem + 3vw);
 		line-height: calc(1rem + 3.5vw);
 	}
 	
-	h3{
+	h3, .h3{
 		font-size: calc(1rem + 2vw);
 		line-height: calc(1rem + 2.5vw);
 	}
 	
-	h4{
+	h4, .h4{
 		font-size: calc(1rem + 1vw);
 		line-height: calc(1rem + 1.6vw);
 	}
 	
-	h5{
+	h5, h5{
 		font-size: calc(1rem + 0.6vw);
 		line-height: calc(1rem + 1.5vw);
 	}
 	
-	h6 {
+	h6, .h6 {
 		font-size:18px;
 		line-height: 36px;
 	}
@@ -864,11 +864,20 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.row_padding_top {
-		padding-top:9vw;
+		padding-top:7vw;
+	}
+
+
+	.row_padding_top_small {
+		padding-top:2vw;
 	}
 	
 	.row_padding_bottom {
-		padding-bottom:9vw;
+		padding-bottom:7vw;
+	}
+
+	.row_padding_bottom_small {
+		padding-bottom:2vw;
 	}
 	
 	.row_padding_left {
