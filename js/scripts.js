@@ -1289,6 +1289,7 @@ Function Showcase Gallery
 			slider = new ClapatSlider('.showcase-gallery', { 
 				direction: 'horizontal', 
 				snap: false,
+				horizontalScrolling: false,
 				navigation: {
 					nextEl: '.cp-button-next',
 					prevEl: '.cp-button-prev'

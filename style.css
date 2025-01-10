@@ -3935,3 +3935,7 @@ Primary use:	Showcase Portfolio
     height: 100%;
     border: 0;
 }
+
+#itemsWrapperLinks{
+	margin-bottom:7vh;
+}

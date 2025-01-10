@@ -25,13 +25,13 @@ Function Scroll Effects
 				return false; // Exit the loop early if a slider is found
 			}
 		});
-
+		/*
 		if (hasSlider) {			
 			body.addClass('has-slider');
 		} else {			
 			body.removeClass('has-slider');
 		}
-		
+		*/
 		setTimeout(function(){
 			var threeapp = document.getElementById("app");
 			threeapp.className += "active"; 
