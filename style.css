@@ -809,6 +809,10 @@ Primary use:	Showcase Portfolio
 		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
+
+	.inner.text-align-center {
+		margin: 0 auto;
+	}
 	
 	.light-section-wrapper, .dark-section-wrapper {
 		margin-left: calc(50% - 50vw)!important;
