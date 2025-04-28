@@ -3943,3 +3943,63 @@ Primary use:	Showcase Portfolio
 #itemsWrapperLinks{
 	margin-bottom:7vh;
 }
+
+/* Phone Showcase Styles */
+.phone-showcase-wrapper {
+    background-color: #FFD7D7;
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+    max-height: 470px;
+}
+
+.phone-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.phone-item {
+    transition: transform 0.5s ease;
+}
+
+.phone-item img {
+    width: 168px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.phone-item:hover {
+    transform: perspective(1000px) rotateY(0deg) translateY(-10px) !important;
+}
+
+@media screen and (max-width: 1024px) {
+    .phone-container {
+        justify-content: space-around;
+    }
+    
+    .phone-item img {
+        width: 140px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .phone-showcase-wrapper {
+        padding: 60px 0;
+    }
+    
+    .phone-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .phone-item {
+        transform: perspective(1000px) rotateY(0deg) !important;
+    }
+    
+    .phone-item img {
+        width: 168px;
+    }
+}
