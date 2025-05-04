@@ -2453,13 +2453,25 @@
 		height:auto;
 		margin:0px;
 	}
+
+	.eqpme .moving-gallery li img {
+		height:36px;
+	}
 	
 	.moving-gallery li img {
-  		border: 1px solid rgba(255,255,255,0.15);
+  		/*border: 1px solid rgba(255,255,255,0.15);*/
 	}
 	
 	.rounded-borders .moving-gallery li img {
-		border-radius:12px;
+		border-radius:5px;
+	}
+
+	.eqpme .rounded-borders .moving-gallery li img {
+		max-height: 35px;
+	}
+
+	.moving-gallery.fw-gallery{
+		padding: 20px 0;
 	}
 	
 	.moving-gallery-caption {
