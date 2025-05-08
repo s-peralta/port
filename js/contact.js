@@ -6,31 +6,38 @@ Function Contact Formular
 	
 		if( $('#contact-formular').length > 0 ){
 			
-			$('#contactform').submit(function(){
+			$('#contactform').submit(function(e){
+				e.preventDefault();
 				var action = $(this).attr('action');
 				$("#message").slideUp(750,function() {
 					$('#message').hide();
-					$('#submit').attr('disabled','disabled');		
-					$.post(action, {
-						name: $('#name').val(),
-						email: $('#email').val(),
-						comments: $('#comments').val(),
-						verify: $('#verify').val()
-					},
-					function(data){
-						document.getElementById('message').innerHTML = data;
-						$('#message').slideDown('slow');
-						$('#contactform img.loader').fadeOut('slow',function(){$(this).remove()});
-						$('#submit').removeAttr('disabled');
-						if(data.match('success') != null) $('#contactform').slideUp('slow');		
-					}
-				);		
-				});		
-				return false;		
+					$('#submit').attr('disabled','disabled');
+					
+					$.ajax({
+						url: action,
+						method: 'POST',
+						data: {
+							name: $('#name').val(),
+							email: $('#email').val(),
+							message: $('#comments').val()
+						},
+						dataType: 'json',
+						success: function(data) {
+							$('#message').html('<div class="success-message">Thank you for your message! I will get back to you soon.</div>');
+							$('#message').slideDown('slow');
+							$('#submit').removeAttr('disabled');
+							$('#contactform')[0].reset();
+						},
+						error: function(data) {
+							$('#message').html('<div class="error-message">Sorry, there was an error sending your message. Please try again.</div>');
+							$('#message').slideDown('slow');
+							$('#submit').removeAttr('disabled');
+						}
+					});
+				});
+				return false;
 			});		
 		}
-		
-
 	}//End ContactForm	
 
 
@@ -52,8 +59,9 @@ Function Contact Map
 				scaleControl: false,
 				zoomControl: false,
 				streetViewControl:false,
-				navigationControl: false};			
-				var newstyle = [
+				navigationControl: false
+			};			
+			var newstyle = [
 				{
 					"featureType": "all",
 					"elementType": "labels.text.fill",
@@ -228,10 +236,9 @@ Function Contact Map
 			};
 			var map = new google.maps.Map(document.getElementById("map_canvas"), settings);	
 			var mapType = new google.maps.StyledMapType(newstyle, { name:"Grayscale" });    
-				map.mapTypes.set('holver', mapType);
-				map.setMapTypeId('holver');
+			map.mapTypes.set('holver', mapType);
+			map.setMapTypeId('holver');
 						
-			
 			google.maps.event.addDomListener(window, "resize", function() {
 				var center = map.getCenter();
 				google.maps.event.trigger(map, "resize");
@@ -249,9 +256,9 @@ Function Contact Map
 				content: contentString
 			});	
 			var companyImage = new google.maps.MarkerImage('images/marker.png',
-				new google.maps.Size(58,63),<!-- Width and height of the marker -->
+				new google.maps.Size(58,63),
 				new google.maps.Point(0,0),
-				new google.maps.Point(35,20)<!-- Position of the marker -->
+				new google.maps.Point(35,20)
 			);
 			var companyPos = new google.maps.LatLng(43.270441,6.640888);	
 			var companyMarker = new google.maps.Marker({
@@ -259,12 +266,12 @@ Function Contact Map
 				map: map,
 				icon: companyImage,               
 				title:"Our Office",
-				zIndex: 3});	
+				zIndex: 3
+			});	
 			google.maps.event.addListener(companyMarker, 'click', function() {
 				infowindow.open(map,companyMarker);
 			});	
 		}
 		
-		return false
-	
+		return false;
 	}//End ContactMap

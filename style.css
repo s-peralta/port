@@ -4003,3 +4003,24 @@ Primary use:	Showcase Portfolio
         width: 168px;
     }
 }
+
+/* Contact Form Messages */
+.success-message {
+    color: #4CAF50;
+    background-color: rgba(76, 175, 80, 0.1);
+    border: 1px solid #4CAF50;
+    padding: 15px;
+    border-radius: 4px;
+    margin: 0 0 40px;
+    text-align: center;
+}
+
+.error-message {
+    color: #f44336;
+    background-color: rgba(244, 67, 54, 0.1);
+    border: 1px solid #f44336;
+    padding: 15px;
+    border-radius: 4px;
+    margin: 10px 0;
+    text-align: center;
+}
